@@ -53,7 +53,7 @@ Not academics — practitioners. All three ship production code with AI daily.
     #v(0.2em)
     #text(fill: rgb("#DA7756"), size: 7.5pt)[#link("https://www.linkedin.com/in/tleyden/")[linkedin.com/in/tleyden]]
     #v(0.3em)
-    #text(size: 8pt)[Cofounder of Fluensy.app. Ex-Databricks / Couchbase senior engineer with 20+ years shipping backend systems in Go, Python, and Rust. Traun brings deep experience in building reliable, well-tested software — and knows exactly where AI-generated code breaks down in production.]
+    #text(size: 8pt)[Co-Founder of Fluensy.app. Ex-Databricks / Couchbase senior engineer with 20+ years shipping backend systems in Go, Python, and Rust. Traun brings deep experience in building reliable, well-tested software — and knows exactly where AI-generated code breaks down in production.]
   ]
 )
 ```

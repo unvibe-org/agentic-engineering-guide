@@ -10,7 +10,7 @@ The practical prompt is short:
 
 > **💡 Prompt**
 >
-> Spawn a red team of agents to review this work\[, ensure you include a X expert\]
+> Spawn a red team of agents to review this work\[, ensure you include an X expert\]
 
 Claude picks reasonable specialists on its own, but it helps to name them explicitly:
 

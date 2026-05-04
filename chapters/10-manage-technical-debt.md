@@ -46,7 +46,7 @@ Prevent what you can, detect what you can't prevent, fix what you detect before 
 
 You've been shipping fast. The agent is cranking. Tickets are closing. Then one morning you open the project and... what is this? Three different auth patterns. Circular imports. A file structure that makes no sense. You're staring at your own codebase and you don't recognize it.
 
-That's the vibe coding hangover.
+That's the Vibe Coding Hangover.
 
 It hits hardest under pressure to deliver something new, when you realize the foundation can barely support what's already there. Your options all suck: patch it (more debt), refactor it (explain the velocity drop to stakeholders), or rewrite it (feels like admitting failure). All of them could have been avoided by paying attention along the way.
 

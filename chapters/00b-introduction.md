@@ -2,13 +2,13 @@
 
 A year ago, "AI coding" mostly meant autocomplete. Today, an agent can read a ticket, plan the work, write the code, run the tests, and open the pull request — in the time it used to take to set up a branch. The leverage is real. So is the mess underneath it.
 
-Most engineers who have shipped serious AI-assisted work have felt the same two things. First: a stretch of speed that feels like cheating. Then the comedown — code that works but you don't quite understand, a codebase drifting somewhere you didn't choose, a review queue full of pull requests no human wants to read. We call it the *vibe coding hangover*, and avoiding it is the reason this guide exists.
+Most engineers who have shipped serious AI-assisted work have felt the same two things. First: a stretch of speed that feels like cheating. Then the comedown — code that works but you don't quite understand, a codebase drifting somewhere you didn't choose, a review queue full of pull requests no human wants to read. We call it the Vibe Coding Hangover, and avoiding it is the reason this guide exists.
 
 **Agentic engineering is the discipline of directing AI agents to ship production code without losing the quality bar, the architectural thread, or your own understanding of the system.** It is not better prompting. It is the system you build around the agent so the agent can do its best work and you can stay in charge of the result.
 
 ### What this is — and isn't
 
-A field manual, not a textbook. Ten practices, organised around the natural arc of a piece of work:
+A field manual, not a textbook. Ten practices, organized around the natural arc of a piece of work:
 
 - **Part I — Plan.** Spec the work, choose the architecture, set the rigor before you prompt.
 - **Part II — Implement.** Run the agent inside fast feedback loops, with the tools and context it needs to be useful.
@@ -30,11 +30,11 @@ What you are reading is the consensus view that emerged from those scars, sharpe
 
 ### How to read it
 
-Linearly, if it is your first pass. The three parts build on each other, and several practices in Part III only make sense once you have internalised Part I.
+Linearly, if it is your first pass. The three parts build on each other, and several practices in Part III only make sense once you have internalized Part I.
 
 As a reference, after that. Each chapter stands alone. Skim the contents, find the practice that matches the failure mode you are currently looking at, and start there.
 
-If you only have ten minutes: read Chapter 1 (*Plan Before You Prompt*) and the closing note on *Vibe Coding Hangovers*. The first is where most of the leverage lives. The second is what happens when you skip the first.
+If you only have ten minutes: read Chapter 1 (*Plan Before You Prompt*) and the closing note on Vibe Coding Hangovers. The first is where most of the leverage lives. The second is what happens when you skip the first.
 
 ### One last thing
 

@@ -1,4 +1,4 @@
-## 7. Effort Is Tending Towards Zero
+## 7. Effort Is Tending Toward Zero
 
 The effort of actually wielding your chosen tools has historically fallen to you, the engineer. Some tools you enjoyed wielding, but some you did not. Perhaps some of these tools were conceptually harder to grasp, or required more effort than you were willing to give.
 

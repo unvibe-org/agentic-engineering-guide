@@ -26,7 +26,7 @@ When this loop works — you thinking clearly about structure, the agent executi
 
 In interviews, coding and system design are separate exercises. In actual work, they bleed into each other constantly. You're writing a function and realize the data model is wrong. You're sketching a system and realize you need to prototype something to check your assumptions.
 
-You can't just "do architecture" in isolation and hand it off.  Don't let the tail wag the dog: you should be designing the architecture with high intentionality, and the coding agent should be aligning it's code to your architectural decisions. The decisions at each abstraction level influence the others, and if you're not paying attention to that interplay, things drift out of alignment fast.
+You can't just "do architecture" in isolation and hand it off. Don't let the tail wag the dog: you should be designing the architecture with high intentionality, and the coding agent should be aligning its code to your architectural decisions. The decisions at each abstraction level influence the others, and if you're not paying attention to that interplay, things drift out of alignment fast.
 
 It's no coincidence that this is also what separates senior engineers from junior ones. Early in your career, strong coding skills can carry you. The further you go, the more you're judged on system-level thinking. The coding agents will act as a force multiplier on this gap.
 
