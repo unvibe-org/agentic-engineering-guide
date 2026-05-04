@@ -1,4 +1,4 @@
-## 7. Code reviews
+## 9. Code Reviews
 
 When agents write most of the code, a single human reviewer becomes the bottleneck. The shift that matters is moving from one human reading every diff to a panel of specialist agents reviewing in parallel — with the human as the final checkpoint, not the first one.
 

@@ -1,4 +1,4 @@
-## 4. Build Fast Feedback Loops
+## 8. Build Fast Feedback Loops
 
 If the AI can't test its own work quickly, it can't self-correct. This means:
 

@@ -73,6 +73,11 @@
   ]
 ]
 
+// ─── H4 — subsection within a chapter ───────────────────────
+#show heading.where(level: 4): it => block(above: 1.4em, below: 0.4em)[
+  #text(font: "JetBrains Mono", fill: rgb("#E8E4DF"), size: 9.5pt, weight: 600)[#it.body]
+]
+
 // ─── Blockquote — Tip admonition: teal box, label in teal ───
 #show quote.where(block: true): it => block(above: 2em, below: 2em, width: 100%)[
   #block(

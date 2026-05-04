@@ -1,4 +1,4 @@
-# Tech Debt: When to Take It On, and How to Avoid the Vibe Coding Hangover
+## 10. Manage Technical Debt Actively
 
 You already know what technical debt feels like, even if you've never used the term. It's that moment where a change that should take twenty minutes takes two days. It's when you fix a bug in one place and three more pop up somewhere else. It's the slow, creeping realization that your codebase is fighting you.
 
@@ -8,7 +8,7 @@ And in the age of agents, this problem gets worse faster than it ever has before
 
 ---
 
-## Not All Debt Is Created Equal
+#### Not All Debt Is Created Equal
 
 Sometimes technical debt is the right call. If you're building a prototype, pile it on. You're trying to validate an idea, not build a cathedral. Debt in throwaway work isn't debt — it's efficiency.
 
@@ -20,7 +20,7 @@ The question you should always be asking is: *how long does this code need to li
 
 ---
 
-## Agents Will Bury You in Debt If You Let Them
+#### Agents Will Bury You in Debt If You Let Them
 
 Agents don't care about your codebase. They care about completing the task you gave them. That's it.
 
@@ -30,7 +30,7 @@ The agent optimizes for the reward signal (task completed, tests pass) and ignor
 
 ---
 
-## How to Keep It Under Control
+#### How to Keep It Under Control
 
 **Know your stack.** You can't guide an agent toward good solutions if you don't understand what good looks like. You don't need to write every line yourself — but you need to understand every "semantic chunk" and know whether it belongs.
 
@@ -42,7 +42,7 @@ Prevent what you can, detect what you can't prevent, fix what you detect before 
 
 ---
 
-## The Vibe Coding Hangover
+#### The Vibe Coding Hangover
 
 You've been shipping fast. The agent is cranking. Tickets are closing. Then one morning you open the project and... what is this? Three different auth patterns. Circular imports. A file structure that makes no sense. You're staring at your own codebase and you don't recognize it.
 
@@ -52,7 +52,7 @@ It hits hardest under pressure to deliver something new, when you realize the fo
 
 ---
 
-## The Sneaky Stuff: Dead Code and Lost Understanding
+#### The Sneaky Stuff: Dead Code and Lost Understanding
 
 Not all tech debt screams at you. Dead code is a perfect example — agents rewrite functions and leave the old versions behind. Nothing breaks, but your codebase fills with ghosts. Every search returns noise. You burn tokens sending useless context to the agent on the next task. Get tooling to catch it: compiler warnings in Rust, linters in TypeScript. This matters more now because agents generate dead code at scale.
 
@@ -62,7 +62,7 @@ Don't let this happen. Read the code the agent writes. Sketch how the system wor
 
 ---
 
-## Strategies That Actually Help
+#### Strategies That Actually Help
 
 **Snippet databases.** Keep a collection of battle-tested code patterns you've already debugged and validated. Point the agent at them. Instead of reinventing solutions (and reinventing new bugs), it reuses something proven. You move faster *and* take on less debt. One of the rare genuine free lunches.
 
@@ -72,7 +72,7 @@ One caveat: don't fight your ecosystem. If you're doing ML work, you're using Py
 
 ---
 
-## The Bottom Line
+#### The Bottom Line
 
 Technical debt in the agent era moves faster and hides better than it used to. But if you understand your tools, set clear constraints, and build feedback loops into your workflow, you can move fast without waking up to a codebase you can't recognize.
 

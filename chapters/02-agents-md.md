@@ -1,4 +1,4 @@
-## 3. AGENTS.md/CLAUDE.md
+## 2. AGENTS.md/CLAUDE.md
 
 The LLM starts every conversation with amnesia. Re-explaining your codebase, conventions, and build commands in every prompt is wasted effort — and it never quite sticks. Persist that knowledge in the repo instead.
 

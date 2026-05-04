@@ -1,4 +1,4 @@
-# Chapter 8: Architecture Over Code
+## 3. Architecture Over Syntax
 
 You're going to spend a lot of time writing code with agents. But the code itself is rarely where the real leverage is. Architecture is.
 
@@ -8,7 +8,7 @@ This is where your attention belongs. Not on whether a loop is elegant, but on h
 
 ---
 
-## You and the Agent Are a Team
+#### You and the Agent Are a Team
 
 Stop thinking of your coding agent as a tool. Think of it as a teammate — one that's complementary to you, not competing with you.
 
@@ -22,7 +22,7 @@ When this loop works — you thinking clearly about structure, the agent executi
 
 ---
 
-## The Boundary Between Architecture and Code Is Blurry
+#### The Boundary Between Architecture and Code Is Blurry
 
 In interviews, coding and system design are separate exercises. In actual work, they bleed into each other constantly. You're writing a function and realize the data model is wrong. You're sketching a system and realize you need to prototype something to check your assumptions.
 
@@ -32,7 +32,7 @@ It's no coincidence that this is also what separates senior engineers from junio
 
 ---
 
-## Focus Where It Matters
+#### Focus Where It Matters
 
 Your attention is the scarcest resource in the entire workflow. Not compute, not tokens — your *attention*.
 
@@ -42,7 +42,7 @@ Get honest about where your time is going. If most of your day is in the weeds a
 
 ---
 
-## Using Agents for Design Research
+#### Using Agents for Design Research
 
 Agents aren't just for writing code — they're useful for exploring the design space. But think of the agent as a research assistant, not an architect. It can survey options and surface approaches you hadn't considered, but its knowledge might be outdated and it doesn't have your full context.
 
@@ -52,7 +52,7 @@ Be explicit about your constraints when you prompt. Scale requirements, team siz
 
 ---
 
-## Leverage Architecture Design Best Practices: Write Things Down
+#### Leverage Architecture Design Best Practices: Write Things Down
 
 Design documents aren't bureaucracy. They're thinking tools.
 
@@ -62,7 +62,7 @@ Even solo, a short doc capturing your key decisions and rationale will save you 
 
 ---
 
-## Prototyping Is a Superpower Now
+#### Prototyping Is a Superpower Now
 
 Prototyping used to be expensive. Building a throwaway implementation to test an assumption might take days, so people skipped it. They'd guess at the architecture and hope.
 

@@ -1,4 +1,4 @@
-## 5. Choose Tools For the AI, Not For You
+## 6. Choose Tools For the AI, Not For You
 
 Mandatory checks are another form of important feedback, such as pre-commit hooks.
 
