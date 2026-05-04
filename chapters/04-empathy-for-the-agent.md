@@ -1,4 +1,4 @@
-## 5. Have Empathy for the Agent
+## 4. Have Empathy for the Agent
 
 Empathy for the agent's situation gets the most out of it, somewhat like being a manager. The LLM starts every conversation with amnesia. It doesn't know your codebase, your conventions, or the discussion that led to this task. We forget how much of our own context we carry by default. The agent has none of it.
 

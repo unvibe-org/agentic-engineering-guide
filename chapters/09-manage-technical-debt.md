@@ -1,4 +1,4 @@
-## 10. Manage Technical Debt Actively
+## 9. Manage Technical Debt Actively
 
 You already know what technical debt feels like, even if you've never used the term. It's that moment where a change that should take twenty minutes takes two days. It's when you fix a bug in one place and three more pop up somewhere else. It's the slow, creeping realization that your codebase is fighting you.
 
