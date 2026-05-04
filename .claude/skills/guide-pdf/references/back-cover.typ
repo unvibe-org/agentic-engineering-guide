@@ -35,9 +35,10 @@
   #block(width: 154mm - 2 * safe)[
     #set text(font: "JetBrains Mono", weight: 400, size: 14pt, fill: text-c)
     #set par(leading: 0.55em)
-    Handed out at the bettervibe workshop —
-    three hours of hands-on agentic engineering
-    in Munich.
+    AI can get you to a demo fast.
+    Engineering judgment is what keeps it
+    running in production. bettervibe
+    teaches the craft in between.
   ]
 ]
 
@@ -46,12 +47,14 @@
   #block(width: 154mm - 2 * safe)[
     #set text(font: "JetBrains Mono", weight: 300, size: 10.5pt, fill: muted)
     #set par(leading: 0.7em)
-    Bring your laptop and a real project. We work
-    it together: agent orchestration, review loops,
-    prompting craft, and the engineering judgment
-    AI output still requires. You leave with code
-    in your repo and a methodology you can use
-    the next morning.
+    A recurring hands-on workshop in Munich
+    for developers who already ship with AI.
+    Bring your laptop and a real project. We
+    work it together: planning, agent
+    orchestration, review loops, and the
+    engineering judgment AI still requires.
+    You leave with code in your repo and a
+    methodology you can use the next morning.
   ]
 ]
 
