@@ -2,7 +2,7 @@
 
 The effort of actually wielding your chosen tools has historically fallen to you, the engineer. Some tools you enjoyed wielding, but some you did not. Perhaps some of these tools were conceptually harder to grasp, or required more effort than you were willing to give.
 
-Now you have a new option. You can now reap the benefits of tools you would previously avoid. The tradeoff is that you must be willing to learn these tools from the top-down, not the bottom up. Understand the principles and the best practices, not the syntax.
+Now you have a new option. You can now reap the benefits of tools you would previously avoid. The tradeoff is that you must be willing to learn these tools top-down, not bottom-up. Understand the principles and the best practices, not the syntax.
 
 Some examples of tools that may fall into this category for you:
 

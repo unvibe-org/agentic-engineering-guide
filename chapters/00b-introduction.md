@@ -34,7 +34,7 @@ Linearly, if it is your first pass. The three parts build on each other, and sev
 
 As a reference, after that. Each chapter stands alone. Skim the contents, find the practice that matches the failure mode you are currently looking at, and start there.
 
-If you only have ten minutes: read Chapter 1 (*Plan Before You Prompt*) and the closing note on Vibe Coding Hangovers. The first is where most of the leverage lives. The second is what happens when you skip the first.
+If you only have ten minutes: read Chapter 1 (*Plan Before You Prompt*) and Chapter 9 (*Manage Technical Debt Actively*). The first is where most of the leverage lives. The second is what happens when you skip the first.
 
 ### One last thing
 
