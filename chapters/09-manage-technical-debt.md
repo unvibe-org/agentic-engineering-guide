@@ -6,9 +6,7 @@ At its core, technical debt is complexity that's slowing you down. Duplicated lo
 
 And in the age of agents, this problem gets worse faster than it ever has before.
 
----
-
-#### Not All Debt Is Created Equal
+### Not All Debt Is Created Equal
 
 Sometimes technical debt is the right call. If you're building a prototype, pile it on. You're trying to validate an idea, not build a cathedral. Debt in throwaway work isn't debt — it's efficiency.
 
@@ -18,9 +16,7 @@ Most of us live somewhere in between. You're building a SaaS product, the produc
 
 The question you should always be asking is: *how long does this code need to live?*
 
----
-
-#### Agents Will Bury You in Debt If You Let Them
+### Agents Will Bury You in Debt If You Let Them
 
 Agents don't care about your codebase. They care about completing the task you gave them. That's it.
 
@@ -28,9 +24,7 @@ If you say "fix the performance issue," an agent will fix it — probably by bol
 
 The agent optimizes for the reward signal (task completed, tests pass) and ignores everything else. It doesn't check whether the solution is consistent with the architecture. It doesn't ask whether there's already a utility function that does the same thing. Left unchecked, your complexity grows with every task — and the agent isn't being malicious. The problem is that "what you asked" and "what you actually need" aren't always the same thing.
 
----
-
-#### How to Keep It Under Control
+### How to Keep It Under Control
 
 **Know your stack.** You can't guide an agent toward good solutions if you don't understand what good looks like. You don't need to write every line yourself — but you need to understand every "semantic chunk" and know whether it belongs.
 
@@ -40,9 +34,7 @@ The agent optimizes for the reward signal (task completed, tests pass) and ignor
 
 Prevent what you can, detect what you can't prevent, fix what you detect before it metastasizes.
 
----
-
-#### The Vibe Coding Hangover
+### The Vibe Coding Hangover
 
 You've been shipping fast. The agent is cranking. Tickets are closing. Then one morning you open the project and... what is this? Three different auth patterns. Circular imports. A file structure that makes no sense. You're staring at your own codebase and you don't recognize it.
 
@@ -50,9 +42,7 @@ That's the Vibe Coding Hangover.
 
 It hits hardest under pressure to deliver something new, when you realize the foundation can barely support what's already there. Your options all suck: patch it (more debt), refactor it (explain the velocity drop to stakeholders), or rewrite it (feels like admitting failure). All of them could have been avoided by paying attention along the way.
 
----
-
-#### The Sneaky Stuff: Dead Code and Lost Understanding
+### The Sneaky Stuff: Dead Code and Lost Understanding
 
 Not all tech debt screams at you. Dead code is a perfect example — agents rewrite functions and leave the old versions behind. Nothing breaks, but your codebase fills with ghosts. Every search returns noise. You burn tokens sending useless context to the agent on the next task. Get tooling to catch it: compiler warnings in Rust, linters in TypeScript. This matters more now because agents generate dead code at scale.
 
@@ -60,9 +50,7 @@ But the really dangerous one is not understanding your own system. This is laten
 
 Don't let this happen. Read the code the agent writes. Sketch how the system works, even if it's boxes and arrows on a napkin. The goal isn't perfect documentation — it's a mental model close enough to reality that you can intervene when things go sideways.
 
----
-
-#### Strategies That Actually Help
+### Strategies That Actually Help
 
 **Snippet databases.** Keep a collection of battle-tested code patterns you've already debugged and validated. Point the agent at them. Instead of reinventing solutions (and reinventing new bugs), it reuses something proven. You move faster *and* take on less debt. One of the rare genuine free lunches.
 
@@ -70,9 +58,7 @@ Don't let this happen. Read the code the agent writes. Sketch how the system wor
 
 One caveat: don't fight your ecosystem. If you're doing ML work, you're using Python — that's where the libraries live. The point is to choose the strongest typing your ecosystem supports, not to abandon your ecosystem in pursuit of type safety.
 
----
-
-#### The Bottom Line
+### The Bottom Line
 
 Technical debt in the agent era moves faster and hides better than it used to. But if you understand your tools, set clear constraints, and build feedback loops into your workflow, you can move fast without waking up to a codebase you can't recognize.
 
