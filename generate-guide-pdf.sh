@@ -1,0 +1,58 @@
+#!/usr/bin/env bash
+# Generates The Vibe Coder's Guide to Agentic Engineering PDF via Pandoc + Typst.
+#
+# Output: cover (page 1) + body chapters (pages 2..N) merged into one PDF.
+#
+# Usage:
+#   ./generate-guide-pdf.sh                                 # default: chapters dir → final guide PDF
+#   ./generate-guide-pdf.sh input.md [output.pdf]           # single chapter file
+#   ./generate-guide-pdf.sh chapters-dir/ [output.pdf]      # all *.md, sorted
+set -euo pipefail
+
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+INPUT="${1:-$SCRIPT_DIR/5-guide/chapters}"
+SKILL_REFS="$SCRIPT_DIR/.claude/skills/guide-pdf/references"
+DESIGN="$SKILL_REFS/design.typ"
+COVER_TYP="$SKILL_REFS/cover.typ"
+
+BACK_COVER_TYP="$SKILL_REFS/back-cover.typ"
+
+TMP_BODY_TYP="$(mktemp /tmp/guide-body-XXXXXX.typ)"
+TMP_COVER_PDF="$(mktemp /tmp/guide-cover-XXXXXX.pdf)"
+TMP_BODY_PDF="$(mktemp /tmp/guide-body-XXXXXX.pdf)"
+TMP_BACK_COVER_PDF="$(mktemp /tmp/guide-back-cover-XXXXXX.pdf)"
+
+cleanup() { rm -f "$TMP_BODY_TYP" "$TMP_COVER_PDF" "$TMP_BODY_PDF" "$TMP_BACK_COVER_PDF"; }
+trap cleanup EXIT
+
+# 1. Compile the front cover
+typst compile "$COVER_TYP" "$TMP_COVER_PDF"
+
+# 2. Compile the body (Pandoc → Typst → PDF, prepending design.typ)
+if [[ -d "$INPUT" ]]; then
+  OUTPUT="${2:-$SCRIPT_DIR/5-guide/vibe-coders-guide.pdf}"
+  mapfile -t INPUTS < <(find "$INPUT" -maxdepth 1 -name '*.md' | sort)
+  if [[ ${#INPUTS[@]} -eq 0 ]]; then
+    echo "No .md files found in $INPUT" >&2
+    exit 1
+  fi
+  pandoc "${INPUTS[@]}" -t typst -o "$TMP_BODY_TYP"
+else
+  OUTPUT="${2:-${INPUT%.md}.pdf}"
+  pandoc "$INPUT" -t typst -o "$TMP_BODY_TYP"
+fi
+
+cat "$DESIGN" "$TMP_BODY_TYP" | typst compile - "$TMP_BODY_PDF"
+
+# 3. Compute back cover page number: 1 (front cover) + body pages + 1
+COVER_PAGES=$(qpdf --show-npages "$TMP_COVER_PDF")
+BODY_PAGES=$(qpdf --show-npages "$TMP_BODY_PDF")
+BACK_COVER_PAGE=$(( COVER_PAGES + BODY_PAGES + 1 ))
+
+# 4. Compile back cover with the correct continued page number
+typst compile --input page="$BACK_COVER_PAGE" "$BACK_COVER_TYP" "$TMP_BACK_COVER_PDF"
+
+# 5. Merge cover + body + back cover into the final PDF
+qpdf --empty --pages "$TMP_COVER_PDF" "$TMP_BODY_PDF" "$TMP_BACK_COVER_PDF" -- "$OUTPUT"
+
+echo "PDF written to $OUTPUT"

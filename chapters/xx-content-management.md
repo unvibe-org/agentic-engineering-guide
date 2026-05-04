@@ -1,0 +1,1 @@
+- Remove outdated documents from the repository — the agent reads them anyway.
