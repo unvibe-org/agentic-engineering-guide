@@ -1,5 +1,0 @@
-- static code analysis (dead code is very bad for LLMs)
-- Spec-driven development
-- Compound Engineering
-- Team should share the process
-- You need to review intent
