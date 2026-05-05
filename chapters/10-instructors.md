@@ -34,7 +34,7 @@ Not academics — practitioners. All three ship production code with AI daily.
     #v(0.2em)
     #text(fill: rgb("#DA7756"), size: 7.5pt)[#link("https://www.linkedin.com/in/dominikgrusemann/")[linkedin.com/in/dominikgrusemann]]
     #v(0.3em)
-    #text(size: 8pt)[Co-Founder of Marbles AI and former CTO of Chatchamp (acquired 2023). Previously led agile engineering at BMW's autonomous driving division. Dominik focuses on CLAUDE.md best practices and compound engineering.]
+    #text(size: 8pt)[Co-Founder of Marbles AI and former CTO of Chatchamp (acquired 2023). Previously led BMW's autonomous driving department toward agile. Dominik focuses on CLAUDE.md best practices and compound engineering.]
   ]
 )
 

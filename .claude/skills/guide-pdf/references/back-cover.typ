@@ -8,7 +8,7 @@
   width: 154mm,
   height: 216mm,
   margin: 0mm,
-  fill: cmyk(60%, 50%, 50%, 100%),
+  fill: rgb("#0D0F11"),
 )
 
 // ─── tokens ──────────────────────────────────────────────────────────────────
@@ -95,7 +95,7 @@
   #instructor(
     "dominik-photo.jpg",
     "Dominik Grusemann",
-    [Cofounder, Marbles AI. Former CTO of Chatchamp (acquired 2023). Previously BMW autonomous driving.]
+    [Cofounder, Marbles AI. Former CTO of Chatchamp (acquired 2023). Previously led BMW's autonomous driving department toward agile.]
   )
   #instructor(
     "traun-photo.jpg",
