@@ -1,7 +1,23 @@
 #!/usr/bin/env python3
-"""Embeds an ICC output intent into a PDF (required for WIRmachenDRUCK print upload)."""
+"""Embeds an ICC output intent + PDF/X-4 XMP metadata into a PDF (required for WIRmachenDRUCK print upload)."""
 import sys
 import pikepdf
+
+PDFX4_XMP = """<?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+<x:xmpmeta xmlns:x="adobe:ns:meta/">
+  <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <rdf:Description rdf:about=""
+        xmlns:pdf="http://ns.adobe.com/pdf/1.3/"
+        xmlns:pdfx="http://ns.adobe.com/pdfx/1.3/"
+        xmlns:pdfxid="http://www.npes.org/pdfx/ns/id/"
+        xmlns:xmp="http://ns.adobe.com/xap/1.0/">
+      <pdf:Trapped>False</pdf:Trapped>
+      <pdfx:GTS_PDFXVersion>PDF/X-4</pdfx:GTS_PDFXVersion>
+      <pdfxid:GTS_PDFXVersion>PDF/X-4</pdfxid:GTS_PDFXVersion>
+    </rdf:Description>
+  </rdf:RDF>
+</x:xmpmeta>
+<?xpacket end="w"?>"""
 
 def embed_output_intent(pdf_path: str, icc_path: str, out_path: str) -> None:
     with open(icc_path, "rb") as f:
@@ -21,6 +37,16 @@ def embed_output_intent(pdf_path: str, icc_path: str, out_path: str) -> None:
         )
 
         pdf.Root["/OutputIntents"] = pikepdf.Array([pdf.make_indirect(output_intent)])
+
+        # PDF/X-4 requires Trapped key in Info dict
+        pdf.docinfo["/Trapped"] = pikepdf.Name("/False")
+
+        # PDF/X-4 conformance is declared in XMP metadata (what Acrobat reads)
+        metadata_stream = pdf.make_stream(PDFX4_XMP.encode("utf-8"))
+        metadata_stream["/Type"] = pikepdf.Name("/Metadata")
+        metadata_stream["/Subtype"] = pikepdf.Name("/XML")
+        pdf.Root["/Metadata"] = pdf.make_indirect(metadata_stream)
+
         pdf.save(out_path)
 
 if __name__ == "__main__":

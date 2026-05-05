@@ -68,7 +68,7 @@ qpdf --empty --pages "$TMP_COVER_PDF" "$TMP_BODY_PDF" "$TMP_BLANK_PAGE_PDF" "$TM
 # 7. Convert to CMYK with Ghostscript
 gs -q -dBATCH -dNOPAUSE -dNOSAFER \
    -sDEVICE=pdfwrite \
-   -dCompatibilityLevel=1.4 \
+   -dCompatibilityLevel=1.6 \
    -dProcessColorModel=/DeviceCMYK \
    -dColorConversionStrategy=/CMYK \
    -sDefaultCMYKProfile="$ICC_PROFILE" \
