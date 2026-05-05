@@ -14,7 +14,7 @@
 )
 
 #image(
-  "vibecoders_guide_cover_a5_bleed_300dpi.png",
+  "vibecoders_guide_cover_a5_bleed_cmyk.jpg",
   width: 154mm,
   height: 216mm,
   fit: "cover",
