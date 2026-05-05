@@ -16,17 +16,19 @@ DESIGN="$SKILL_REFS/design.typ"
 COVER_TYP="$SKILL_REFS/cover.typ"
 
 BACK_COVER_TYP="$SKILL_REFS/back-cover.typ"
+BLANK_PAGE_TYP="$SKILL_REFS/blank-page.typ"
 ICC_PROFILE="$SKILL_REFS/ISOcoated_v2_300_eci.icc"
 EMBED_INTENT="$SKILL_REFS/embed_output_intent.py"
 
 TMP_BODY_TYP="$(mktemp /tmp/guide-body-XXXXXX.typ)"
 TMP_COVER_PDF="$(mktemp /tmp/guide-cover-XXXXXX.pdf)"
 TMP_BODY_PDF="$(mktemp /tmp/guide-body-XXXXXX.pdf)"
+TMP_BLANK_PAGE_PDF="$(mktemp /tmp/guide-blank-XXXXXX.pdf)"
 TMP_BACK_COVER_PDF="$(mktemp /tmp/guide-back-cover-XXXXXX.pdf)"
 TMP_MERGED_PDF="$(mktemp /tmp/guide-merged-XXXXXX.pdf)"
 TMP_CMYK_PDF="$(mktemp /tmp/guide-cmyk-XXXXXX.pdf)"
 
-cleanup() { rm -f "$TMP_BODY_TYP" "$TMP_COVER_PDF" "$TMP_BODY_PDF" "$TMP_BACK_COVER_PDF" "$TMP_MERGED_PDF" "$TMP_CMYK_PDF"; }
+cleanup() { rm -f "$TMP_BODY_TYP" "$TMP_COVER_PDF" "$TMP_BODY_PDF" "$TMP_BLANK_PAGE_PDF" "$TMP_BACK_COVER_PDF" "$TMP_MERGED_PDF" "$TMP_CMYK_PDF"; }
 trap cleanup EXIT
 
 # 1. Compile the front cover
@@ -48,18 +50,22 @@ fi
 
 cat "$DESIGN" "$TMP_BODY_TYP" | typst compile - "$TMP_BODY_PDF"
 
-# 3. Compute back cover page number: 1 (front cover) + body pages + 1
+# 3. Compute page numbers
 COVER_PAGES=$(qpdf --show-npages "$TMP_COVER_PDF")
 BODY_PAGES=$(qpdf --show-npages "$TMP_BODY_PDF")
-BACK_COVER_PAGE=$(( COVER_PAGES + BODY_PAGES + 1 ))
+BLANK_PAGE=$(( COVER_PAGES + BODY_PAGES + 1 ))
+BACK_COVER_PAGE=$(( BLANK_PAGE + 1 ))
 
-# 4. Compile back cover with the correct continued page number
+# 4. Compile blank page with correct page number
+typst compile --input page="$BLANK_PAGE" "$BLANK_PAGE_TYP" "$TMP_BLANK_PAGE_PDF"
+
+# 5. Compile back cover with the correct continued page number
 typst compile --input page="$BACK_COVER_PAGE" "$BACK_COVER_TYP" "$TMP_BACK_COVER_PDF"
 
-# 5. Merge cover + body + back cover
-qpdf --empty --pages "$TMP_COVER_PDF" "$TMP_BODY_PDF" "$TMP_BACK_COVER_PDF" -- "$TMP_MERGED_PDF"
+# 6. Merge cover + body + blank + back cover
+qpdf --empty --pages "$TMP_COVER_PDF" "$TMP_BODY_PDF" "$TMP_BLANK_PAGE_PDF" "$TMP_BACK_COVER_PDF" -- "$TMP_MERGED_PDF"
 
-# 6. Convert to CMYK with Ghostscript
+# 7. Convert to CMYK with Ghostscript
 gs -q -dBATCH -dNOPAUSE -dNOSAFER \
    -sDEVICE=pdfwrite \
    -dCompatibilityLevel=1.4 \
@@ -69,5 +75,5 @@ gs -q -dBATCH -dNOPAUSE -dNOSAFER \
    -sOutputFile="$TMP_CMYK_PDF" \
    "$TMP_MERGED_PDF"
 
-# 7. Embed ISOcoated v2 300% as PDF OutputIntent
+# 8. Embed ISOcoated v2 300% as PDF OutputIntent
 python3 "$EMBED_INTENT" "$TMP_CMYK_PDF" "$ICC_PROFILE" "$OUTPUT"
