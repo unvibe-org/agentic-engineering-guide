@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
+
+/* ─── Page Setup ─────────────────────────────────────────── */
+/* @page margin MUST be 0 — Chrome/Puppeteer cannot paint margin areas with CSS.
+   All spacing comes from element margins instead. */
+@page {
+  size: A5;
+  margin: 0;
+}
+
+/* ─── Base ───────────────────────────────────────────────── */
+* {
+  box-sizing: border-box;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+html {
+  background: #0D0F11;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'JetBrains Mono', 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  line-height: 1.75;
+  background: #0D0F11;
+  color: #E8E4DF;
+  margin: 0;
+  /* Top/bottom padding for page 1. Pages 2+ rely on h2 margin-top for spacing. */
+  padding: 14mm 16mm 12mm 14mm;
+}
+
+/* ─── Cover / Title ──────────────────────────────────────── */
+h1 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #E8E4DF;
+  letter-spacing: -0.5px;
+  margin-top: 0;
+  margin-bottom: 4px;
+  line-height: 1.2;
+}
+
+/* amber dot — mimics bettervibe. wordmark */
+h1::after {
+  content: '.';
+  color: #DA7756;
+}
+
+/* ─── Subtitle ───────────────────────────────────────────── */
+em {
+  color: #9B9690;
+  font-style: normal;
+  font-size: 9px;
+  letter-spacing: 0.5px;
+}
+
+/* ─── Horizontal Rule ────────────────────────────────────── */
+hr {
+  border: none;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  margin: 14px 0;
+}
+
+/* ─── Section Headings (principles) ─────────────────────── */
+h2 {
+  font-size: 11px;
+  font-weight: 600;
+  color: #DA7756;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  /* 14mm ≈ 53px — matches body padding-top so h2 looks right when it's
+     the first element on a continuation page */
+  margin-top: 53px;
+  margin-bottom: 6px;
+  break-after: avoid;
+  page-break-after: avoid;
+}
+
+h2::before {
+  content: '// ';
+  color: rgba(218, 119, 86, 0.45);
+  font-weight: 300;
+}
+
+/* ─── Sub-headings / Watch For callout ──────────────────── */
+h3 {
+  font-size: 10px;
+  font-weight: 600;
+  color: #E8E4DF;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-top: 22px;
+  margin-bottom: 6px;
+  padding: 6px 10px;
+  background: rgba(218, 119, 86, 0.1);
+  border-left: 2px solid #DA7756;
+  break-after: avoid;
+  page-break-after: avoid;
+}
+
+/* ─── Body paragraphs ────────────────────────────────────── */
+p {
+  font-size: 10px;
+  font-weight: 300;
+  color: #C8C4BF;
+  margin: 0 0 8px 0;
+  line-height: 1.75;
+}
+
+/* ─── Lists ──────────────────────────────────────────────── */
+ul, ol {
+  margin: 4px 0 8px 0;
+  padding-left: 16px;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+li {
+  font-size: 10px;
+  font-weight: 300;
+  color: #C8C4BF;
+  margin-bottom: 3px;
+  line-height: 1.65;
+}
+
+ul li::marker {
+  color: #DA7756;
+  content: '▸  ';
+}
+
+/* ─── Bold ───────────────────────────────────────────────── */
+strong {
+  font-weight: 600;
+  color: #E8E4DF;
+}
+
+/* ─── Inline code ────────────────────────────────────────── */
+code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  background: rgba(255,255,255,0.06);
+  color: #7EC699;
+  padding: 1px 5px;
+  border-radius: 3px;
+}
+
+/* ─── Blockquote ─────────────────────────────────────────── */
+blockquote {
+  border-left: 2px solid #DA7756;
+  margin: 12px 0;
+  padding: 4px 10px;
+  color: #9B9690;
+  font-size: 9px;
+  font-style: italic;
+}
+
+/* ─── Footer line ────────────────────────────────────────── */
+body::after {
+  content: 'bettervibe.';
+  display: block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  color: #DA7756;
+  text-align: right;
+  margin-top: 24px;
+  letter-spacing: 0.5px;
+}
+
+/* ─── Page break rules ───────────────────────────────────── */
+p, li { orphans: 3; widows: 3; }
