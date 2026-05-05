@@ -6,7 +6,7 @@
 #set page(
   width: 154mm,
   height: 216mm,
-  fill: rgb("#0D0F11"),
+  fill: cmyk(60%, 50%, 50%, 100%),
   margin: (top: 17mm, bottom: 17mm, left: 17mm, right: 19mm),
   footer: [
     #grid(

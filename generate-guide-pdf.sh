@@ -70,7 +70,7 @@ gs -q -dBATCH -dNOPAUSE -dNOSAFER \
    -sDEVICE=pdfwrite \
    -dCompatibilityLevel=1.6 \
    -dProcessColorModel=/DeviceCMYK \
-   -dColorConversionStrategy=/CMYK \
+   -dColorConversionStrategy=/LeaveColorUnchanged \
    -sDefaultCMYKProfile="$ICC_PROFILE" \
    -sOutputFile="$TMP_CMYK_PDF" \
    "$TMP_MERGED_PDF"
