@@ -4,7 +4,7 @@
 // ─── Page ────────────────────────────────────────────────────
 #set page(
   paper: "a5",
-  fill: cmyk(60%, 50%, 50%, 100%),
+  fill: rgb("#0D0F11"),
   margin: (top: 14mm, bottom: 14mm, left: 14mm, right: 16mm),
   footer: context [
     #set align(right)

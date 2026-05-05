@@ -8,7 +8,7 @@ Not academics — practitioners. All three ship production code with AI daily.
   columns: (52pt, 1fr),
   column-gutter: 14pt,
   box(clip: true, radius: 50%, width: 52pt, height: 52pt)[
-    #image("2-marketing/assets/adam-photo.jpg", width: 52pt, height: 52pt, fit: "cover")
+    #image("2-marketing/assets/adam-photo.cmyk.jpg", width: 52pt, height: 52pt, fit: "cover")
   ],
   [
     #text(fill: rgb("#E8E4DF"), weight: 600)[Adam Charnock]
@@ -27,7 +27,7 @@ Not academics — practitioners. All three ship production code with AI daily.
   columns: (52pt, 1fr),
   column-gutter: 14pt,
   box(clip: true, radius: 50%, width: 52pt, height: 52pt)[
-    #image("2-marketing/instructors/dominik.jpeg", width: 52pt, height: 52pt, fit: "cover")
+    #image("2-marketing/instructors/dominik.cmyk.jpg", width: 52pt, height: 52pt, fit: "cover")
   ],
   [
     #text(fill: rgb("#E8E4DF"), weight: 600)[Dominik Grusemann]
@@ -46,7 +46,7 @@ Not academics — practitioners. All three ship production code with AI daily.
   columns: (52pt, 1fr),
   column-gutter: 14pt,
   box(clip: true, radius: 50%, width: 52pt, height: 52pt)[
-    #image("2-marketing/assets/traun_profile_photo.jpg", width: 52pt, height: 52pt, fit: "cover")
+    #image("2-marketing/assets/traun_profile_photo.cmyk.jpg", width: 52pt, height: 52pt, fit: "cover")
   ],
   [
     #text(fill: rgb("#E8E4DF"), weight: 600)[Traun Leyden]

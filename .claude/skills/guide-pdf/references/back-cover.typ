@@ -88,17 +88,17 @@
 
 #place(top + left, dx: safe, dy: safe + 109mm)[
   #instructor(
-    "adam-photo.jpg",
+    "adam-photo.cmyk.jpg",
     "Adam Charnock",
     [Founder, Lithus. Eighteen years of production infrastructure (Twitter, Blocknative).]
   )
   #instructor(
-    "dominik-photo.jpg",
+    "dominik-photo.cmyk.jpg",
     "Dominik Grusemann",
     [Cofounder, Marbles AI. Former CTO of Chatchamp (acquired 2023). Previously led BMW's autonomous driving department toward agile.]
   )
   #instructor(
-    "traun-photo.jpg",
+    "traun-photo.cmyk.jpg",
     "Traun Leyden",
     [Cofounder, Fluensy.app - Speak As Brilliantly As You Think. Twenty years shipping backend systems (Databricks, Couchbase).]
   )
