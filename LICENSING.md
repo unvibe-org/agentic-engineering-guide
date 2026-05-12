@@ -2,8 +2,9 @@
 
 The Vibe Coder's Guide to Agentic Engineering uses different licenses
 for different parts of this repository. Read this file first; the
-formal license texts in `LICENSE` and `LICENSE-CONTENT` control if
-there's ever a disagreement with the summary below.
+formal license texts in `LICENSE` (MIT, for code) and
+`LICENSE-CC-BY-NC-SA-4.0` (for written content) control if there's
+ever a disagreement with the summary below.
 
 ## TL;DR
 
