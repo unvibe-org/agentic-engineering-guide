@@ -1,6 +1,6 @@
-# The Vibe Coder's Guide to Agentic Engineering
+# A Vibe Coder's Guide to Agentic Engineering
 
-The Vibe Coder's Guide to Agentic Engineering is a practical handbook on how to
+A Vibe Coder's Guide to Agentic Engineering is a practical handbook on how to
 build software with AI agents in the loop. It is written by the instructors of
 the bettervibe Agentic Engineering Workshop and is handed out to every
 participant in print.
