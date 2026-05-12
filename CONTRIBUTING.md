@@ -51,7 +51,7 @@ You also agree that the contribution is public and that a record of it
   `generate-guide-pdf.sh`, build scripts) are licensed under the **MIT
   License** — see `LICENSE`.
 - Content contributions (`chapters/`, variants, `README.md`) are licensed
-  under **CC BY-NC-SA 4.0** — see `LICENSE-CC-BY-NC-SA-4.0`.
+  under **CC BY-NC-SA 4.0** — see `LICENSE-CONTENT`.
 
 If your contribution mixes both, the relevant license applies to each
 file by location.

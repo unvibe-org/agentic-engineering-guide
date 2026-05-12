@@ -51,14 +51,14 @@ This repository is dual-licensed:
 
 - **Written content** (chapters, drafts, this README) — Creative Commons
   Attribution-NonCommercial-ShareAlike 4.0 International
-  ([CC BY-NC-SA 4.0](LICENSE-CC-BY-NC-SA-4.0)). Share and remix freely for
+  ([CC BY-NC-SA 4.0](LICENSE-CONTENT)). Share and remix freely for
   non-commercial use, with attribution, under the same license.
 - **Build pipeline** (`generate-guide-pdf.sh`, Typst templates, helper
   scripts) — [MIT License](LICENSE). Use it for anything.
 - **Instructor photos** and the compiled `agentic-engineering-guide.pdf` — all
   rights reserved.
 
-See [`LICENSING.md`](LICENSING.md) for a plain-English summary and
+See [`NOTICE.md`](NOTICE.md) for a plain-English summary and
 [`CONTRIBUTING.md`](CONTRIBUTING.md) for how to submit changes (we use
 DCO sign-off on every commit).
 
