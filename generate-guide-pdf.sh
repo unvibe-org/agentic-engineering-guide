@@ -10,7 +10,7 @@
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-INPUT="${1:-$SCRIPT_DIR/5-guide/chapters}"
+INPUT="${1:-$SCRIPT_DIR/chapters}"
 SKILL_REFS="$SCRIPT_DIR/.claude/skills/guide-pdf/references"
 DESIGN="$SKILL_REFS/design.typ"
 COVER_TYP="$SKILL_REFS/cover.typ"
@@ -36,7 +36,7 @@ typst compile "$COVER_TYP" "$TMP_COVER_PDF"
 
 # 2. Compile the body (Pandoc → Typst → PDF, prepending design.typ)
 if [[ -d "$INPUT" ]]; then
-  OUTPUT="${2:-$SCRIPT_DIR/5-guide/vibe-coders-guide.pdf}"
+  OUTPUT="${2:-$SCRIPT_DIR/vibe-coders-guide.pdf}"
   mapfile -t INPUTS < <(find "$INPUT" -maxdepth 1 -name '*.md' | sort)
   if [[ ${#INPUTS[@]} -eq 0 ]]; then
     echo "No .md files found in $INPUT" >&2

@@ -33,16 +33,16 @@ typst --version && pandoc --version && qpdf --version
 bash generate-guide-pdf.sh
 ```
 
-Default output: `5-guide/vibe-coders-guide.pdf`. The script does four things:
+Default output: `vibe-coders-guide.pdf`. The script does four things:
 1. Typst compiles `references/cover.typ` → `cover.pdf`
-2. Pandoc converts `5-guide/chapters/*.md` (sorted by filename) → Typst body, then prepends `references/design.typ` and Typst compiles → `body.pdf`
+2. Pandoc converts `chapters/*.md` (sorted by filename) → Typst body, then prepends `references/design.typ` and Typst compiles → `body.pdf`
 3. Typst compiles `references/back-cover.typ` → `back-cover.pdf`
 4. qpdf merges `cover.pdf` + `body.pdf` + `back-cover.pdf` → final PDF
 
 Explicit paths are also supported:
 
 ```bash
-bash generate-guide-pdf.sh 5-guide/chapters out.pdf   # directory
+bash generate-guide-pdf.sh chapters out.pdf   # directory
 bash generate-guide-pdf.sh some-file.md     out.pdf   # single file
 ```
 
@@ -85,7 +85,7 @@ To update brand tokens, edit `references/design.typ` only.
 ## Updating the Guide
 
 **Content (chapters):**
-1. Edit (or add/remove) chapter files in `5-guide/chapters/` — order is controlled by the `NN-` numeric prefix
+1. Edit (or add/remove) chapter files in `chapters/` — order is controlled by the `NN-` numeric prefix
 2. Re-run the script
 
 **Cover (rare):**
