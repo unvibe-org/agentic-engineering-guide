@@ -49,7 +49,7 @@ generate-guide-pdf.sh      Build pipeline
 
 This repository is dual-licensed:
 
-- **Written content** (chapters, variants, this README) — Creative Commons
+- **Written content** (chapters, drafts, this README) — Creative Commons
   Attribution-NonCommercial-ShareAlike 4.0 International
   ([CC BY-NC-SA 4.0](LICENSE-CONTENT)). Share and remix freely for
   non-commercial use, with attribution, under the same license.
