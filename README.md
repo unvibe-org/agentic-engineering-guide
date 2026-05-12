@@ -33,8 +33,7 @@ tokens, edit `references/design.typ`. To change the cover, edit
 ```
 chapters/                  Numbered markdown chapters (build input)
 assets/                    Instructor photos used inside chapters
-adam/, dominik/, traun/    Personalized variants of the guide
-future-versions/           Drafts and chapters not yet shipped
+drafts/                    In-progress chapters not yet promoted to chapters/
 generate-guide-pdf.sh      Build pipeline
 .claude/skills/guide-pdf/  Typst templates, ICC profile, helper scripts
 ```
