@@ -15,7 +15,7 @@ ICC profile so it can be sent straight to a print shop.
 ./generate-guide-pdf.sh
 ```
 
-Output: `vibe-coders-guide.pdf` at the repo root.
+Output: `agentic-engineering-guide.pdf` at the repo root.
 
 Requirements: `pandoc`, `typst`, `qpdf`, `ghostscript`, `python3`. On macOS:
 
@@ -55,7 +55,7 @@ This repository is dual-licensed:
   non-commercial use, with attribution, under the same license.
 - **Build pipeline** (`generate-guide-pdf.sh`, Typst templates, helper
   scripts) — [MIT License](LICENSE). Use it for anything.
-- **Instructor photos** and the compiled `vibe-coders-guide.pdf` — all
+- **Instructor photos** and the compiled `agentic-engineering-guide.pdf` — all
   rights reserved.
 
 See [`NOTICE.md`](NOTICE.md) for a plain-English summary and

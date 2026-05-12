@@ -12,7 +12,7 @@ there's ever a disagreement with the summary below.
 | Written content (chapters, variants, README) | **CC BY-NC-SA 4.0** | Read, share, remix, translate **for non-commercial use** — must give credit and license your version the same way. |
 | Build pipeline (scripts, Typst templates) | **MIT** | Use it for anything, including commercial work. |
 | Instructor photos (`assets/*.jpg`) | **All rights reserved** | No — these are personal photos, used here with permission. |
-| Compiled `vibe-coders-guide.pdf` | **All rights reserved** by bettervibe | Don't redistribute the finished PDF. The sources are licensed above; the finished, designed artifact is the authors' product. |
+| Compiled `agentic-engineering-guide.pdf` | **All rights reserved** by bettervibe | Don't redistribute the finished PDF. The sources are licensed above; the finished, designed artifact is the authors' product. |
 | ICC color profile (`ISOcoated_v2_300_eci.icc`) | Upstream — see ECI | Redistribute under ECI's terms. |
 
 ## What counts as non-commercial?
