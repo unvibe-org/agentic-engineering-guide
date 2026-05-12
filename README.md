@@ -45,6 +45,25 @@ generate-guide-pdf.sh      Build pipeline
   both singular and plural. Same rule for **Vibe Coding** and
   **Agentic Engineering** when used as named concepts.
 
+## License
+
+This repository is dual-licensed:
+
+- **Written content** (chapters, variants, this README) — Creative Commons
+  Attribution-NonCommercial-ShareAlike 4.0 International
+  ([CC BY-NC-SA 4.0](LICENSE-CONTENT)). Share and remix freely for
+  non-commercial use, with attribution, under the same license.
+- **Build pipeline** (`generate-guide-pdf.sh`, Typst templates, helper
+  scripts) — [MIT License](LICENSE). Use it for anything.
+- **Instructor photos** and the compiled `vibe-coders-guide.pdf` — all
+  rights reserved.
+
+See [`NOTICE.md`](NOTICE.md) for a plain-English summary and
+[`CONTRIBUTING.md`](CONTRIBUTING.md) for how to submit changes (we use
+DCO sign-off on every commit).
+
+Copyright © 2026 Adam Charnock, Dominik Grusemann, Traun Leyden.
+
 ## About bettervibe
 
 This guide accompanies the bettervibe Agentic Engineering Workshop. More at
