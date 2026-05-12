@@ -33,7 +33,7 @@ typst --version && pandoc --version && qpdf --version
 bash generate-guide-pdf.sh
 ```
 
-Default output: `vibe-coders-guide.pdf`. The script does four things:
+Default output: `agentic-engineering-guide.pdf`. The script does four things:
 1. Typst compiles `references/cover.typ` → `cover.pdf`
 2. Pandoc converts `chapters/*.md` (sorted by filename) → Typst body, then prepends `references/design.typ` and Typst compiles → `body.pdf`
 3. Typst compiles `references/back-cover.typ` → `back-cover.pdf`
