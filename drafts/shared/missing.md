@@ -4,3 +4,4 @@
 - Team should share the process
 - You need to review intent
 - Token Usage (Luca?)
+- TDD
