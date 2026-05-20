@@ -5,3 +5,4 @@
 - You need to review intent
 - Token Usage (Luca?)
 - TDD
+- Monorepos
