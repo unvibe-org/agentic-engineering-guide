@@ -6,3 +6,4 @@
 - Token Usage (Luca?)
 - TDD
 - Monorepos
+- Stop the agent, when it's running in the wrong direction.
