@@ -127,7 +127,7 @@
     fill: rgb("#E8E4DF"),
     inset: 2mm,
     radius: 1mm,
-    image("bettervibe-qr.png", width: qr-size, height: qr-size)
+    image("unvibe-qr.png", width: qr-size, height: qr-size)
   )
 ]
 

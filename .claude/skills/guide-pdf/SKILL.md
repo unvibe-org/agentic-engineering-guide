@@ -56,7 +56,7 @@ All styling lives in `.claude/skills/guide-pdf/references/`:
 |---|---|
 | `cover.typ` | Standalone front-cover Typst doc, A5 + 3mm bleed (154×216 mm), no margins. Manual `#place` positioning for typographic precision. |
 | `back-cover.typ` | Standalone back-cover Typst doc, same A5 + 3mm bleed spec. Terminal prompt, hook/body text, instructor bios, QR code, unvibe.org CTA. |
-| `bettervibe-qr.png` | QR code image used by `back-cover.typ`. |
+| `unvibe-qr.png` | QR code image used by `back-cover.typ`. |
 | `design.typ` | Body styling — page setup, headings, code, lists. Prepended to Pandoc's Typst output before compilation. |
 
 ### Cover spec
