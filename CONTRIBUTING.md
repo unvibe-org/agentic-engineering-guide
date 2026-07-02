@@ -69,4 +69,4 @@ file by location.
 ## Code of conduct
 
 Be kind. Assume good faith. If something feels off, email
-hello@bettervibe.org.
+hello@unvibe.org.

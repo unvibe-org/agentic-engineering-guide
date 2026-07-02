@@ -1,4 +1,4 @@
-// bettervibe — The Vibe Coder's Guide to Agentic Engineering · design template
+// unvibe — The Vibe Coder's Guide to Agentic Engineering · design template
 // This file is prepended to the Pandoc-generated body before Typst compilation.
 //
 // Page geometry: 154 × 216 mm = A5 (148×210) + 3mm bleed on all sides.
@@ -18,7 +18,7 @@
       columns: (1fr, 1fr),
       [
         #text(font: "JetBrains Mono", size: 9pt, weight: 500)[
-          #text(fill: rgb("#E8E4DF"))[bettervibe]#text(fill: rgb("#DA7756"))[.]#text(fill: rgb("#E8E4DF"))[org]
+          #text(fill: rgb("#E8E4DF"))[unvibe]#text(fill: rgb("#DA7756"))[.]#text(fill: rgb("#E8E4DF"))[org]
         ]
       ],
       align(right)[

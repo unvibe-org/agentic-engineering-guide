@@ -1,4 +1,4 @@
-// bettervibe — The Vibe Coder's Guide to Agentic Engineering · back cover
+// unvibe — The Vibe Coder's Guide to Agentic Engineering · back cover
 // A5 + 3mm bleed → 154 × 216 mm, no margins (positioning manual via #place).
 //
 // Lives at .claude/skills/guide-pdf/references/back-cover.typ
@@ -22,7 +22,7 @@
 // ─── prompt ──────────────────────────────────────────────────────────────────
 #place(top + left, dx: safe, dy: safe + 4mm)[
   #set text(font: "JetBrains Mono", size: 9pt)
-  #text(fill: dim)[\~/bettervibe ]#text(fill: amber)[\$]#text(fill: text-c)[ cat about.md]
+  #text(fill: dim)[\~/unvibe ]#text(fill: amber)[\$]#text(fill: text-c)[ cat about.md]
 ]
 
 // divider under prompt
@@ -37,7 +37,7 @@
     #set par(leading: 0.55em)
     AI can get you to a demo fast.
     Engineering judgment is what keeps it
-    running in production. bettervibe
+    running in production. unvibe
     teaches the craft in between.
   ]
 ]
@@ -117,7 +117,7 @@
 ]
 #place(bottom + left, dx: safe, dy: -(safe + 17mm))[
   #set text(font: "JetBrains Mono", size: 14pt, weight: 600)
-  #text(fill: text-c)[bettervibe]#text(fill: amber)[.]#text(fill: text-c)[org]
+  #text(fill: text-c)[unvibe]#text(fill: amber)[.]#text(fill: text-c)[org]
 ]
 
 // QR card on the right — warm-white background for maximum scanner reliability
@@ -139,7 +139,7 @@
       columns: (1fr, 1fr),
       [
         #text(font: "JetBrains Mono", size: 9pt, weight: 500)[
-          #text(fill: text-c)[bettervibe]#text(fill: amber)[.]#text(fill: text-c)[org]
+          #text(fill: text-c)[unvibe]#text(fill: amber)[.]#text(fill: text-c)[org]
         ]
       ],
       align(right)[

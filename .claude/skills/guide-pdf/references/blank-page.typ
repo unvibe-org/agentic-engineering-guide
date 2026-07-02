@@ -13,7 +13,7 @@
       columns: (1fr, 1fr),
       [
         #text(font: "JetBrains Mono", size: 9pt, weight: 500)[
-          #text(fill: rgb("#E8E4DF"))[bettervibe]#text(fill: rgb("#DA7756"))[.]#text(fill: rgb("#E8E4DF"))[org]
+          #text(fill: rgb("#E8E4DF"))[unvibe]#text(fill: rgb("#DA7756"))[.]#text(fill: rgb("#E8E4DF"))[org]
         ]
       ],
       align(right)[

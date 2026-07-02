@@ -1,11 +1,11 @@
 ---
 name: guide-pdf
-description: Convert The Vibe Coder's Guide to Agentic Engineering markdown chapters into a brand-compliant printable PDF using Pandoc + Typst and the bettervibe design system. Includes the front cover and back cover. Use this skill when the user asks to generate, export, regenerate, or produce a PDF of the guide — or to update the cover (authors, version, date).
+description: Convert The Vibe Coder's Guide to Agentic Engineering markdown chapters into a brand-compliant printable PDF using Pandoc + Typst and the unvibe design system. Includes the front cover and back cover. Use this skill when the user asks to generate, export, regenerate, or produce a PDF of the guide — or to update the cover (authors, version, date).
 ---
 
 # Guide PDF Generation Skill
 
-Produces *The Vibe Coder's Guide to Agentic Engineering* as a single A5 PDF: front cover (page 1) + body chapters (pages 2..N) + back cover (last page), all on the bettervibe terminal design system.
+Produces *The Vibe Coder's Guide to Agentic Engineering* as a single A5 PDF: front cover (page 1) + body chapters (pages 2..N) + back cover (last page), all on the unvibe terminal design system.
 
 ## Toolchain: Pandoc + Typst + qpdf
 
@@ -55,7 +55,7 @@ All styling lives in `.claude/skills/guide-pdf/references/`:
 | File | Purpose |
 |---|---|
 | `cover.typ` | Standalone front-cover Typst doc, A5 + 3mm bleed (154×216 mm), no margins. Manual `#place` positioning for typographic precision. |
-| `back-cover.typ` | Standalone back-cover Typst doc, same A5 + 3mm bleed spec. Terminal prompt, hook/body text, instructor bios, QR code, bettervibe.org CTA. |
+| `back-cover.typ` | Standalone back-cover Typst doc, same A5 + 3mm bleed spec. Terminal prompt, hook/body text, instructor bios, QR code, unvibe.org CTA. |
 | `bettervibe-qr.png` | QR code image used by `back-cover.typ`. |
 | `design.typ` | Body styling — page setup, headings, code, lists. Prepended to Pandoc's Typst output before compilation. |
 
@@ -64,7 +64,7 @@ All styling lives in `.claude/skills/guide-pdf/references/`:
 - Page: 154 × 216 mm (A5 + 3mm bleed on all sides). Trim is 148 × 210 mm.
 - Background: `rgb("#0D0F11")` full bleed
 - Font: JetBrains Mono (system), all weights
-- Layout: terminal prompt at top, three-line title (`vibe` / `coder's` / `guide.`) with amber period, subtitle, authors row, footer with `bettervibe.org` (amber dot) and version
+- Layout: terminal prompt at top, three-line title (`vibe` / `coder's` / `guide.`) with amber period, subtitle, authors row, footer with `unvibe.org` (amber dot) and version
 
 To change the authors, version, or workshop date: edit `cover.typ` directly. The values are hard-coded near the bottom of the file.
 
@@ -76,7 +76,7 @@ To change the authors, version, or workshop date: edit `cover.typ` directly. The
 - H3: amber-bordered, tinted-bg "watch for" callouts
 - Blockquote: teal-bordered, tinted-bg "tip" admonition (bold first line renders as teal label)
 - Inline code: green on faint white wash
-- Footer: `bettervibe.` amber, right-aligned on every page
+- Footer: `unvibe.` amber, right-aligned on every page
 
 To update brand tokens, edit `references/design.typ` only.
 

@@ -1,5 +1,5 @@
 
-// bettervibe — The Vibe Coder's Guide to Agentic Engineering · front cover
+// unvibe — The Vibe Coder's Guide to Agentic Engineering · front cover
 // A5 + 3mm bleed → 154 × 216 mm, no margins (positioning manual via #place).
 // Renders the pre-designed PNG cover image full-bleed.
 // Image is sized to A5+bleed (154×216mm at 300dpi = 1819×2551px).
