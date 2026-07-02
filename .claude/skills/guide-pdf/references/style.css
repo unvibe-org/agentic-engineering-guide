@@ -43,7 +43,7 @@ h1 {
   line-height: 1.2;
 }
 
-/* amber dot — mimics bettervibe. wordmark */
+/* amber dot — mimics unvibe. wordmark */
 h1::after {
   content: '.';
   color: #DA7756;
@@ -159,7 +159,7 @@ blockquote {
 
 /* ─── Footer line ────────────────────────────────────────── */
 body::after {
-  content: 'bettervibe.';
+  content: 'unvibe.';
   display: block;
   font-family: 'JetBrains Mono', monospace;
   font-size: 9px;

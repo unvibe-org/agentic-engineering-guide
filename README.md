@@ -2,7 +2,7 @@
 
 A Vibe Coder's Guide to Agentic Engineering is a practical handbook on how to
 build software with AI agents in the loop. It is written by the instructors of
-the bettervibe Agentic Engineering Workshop and is handed out to every
+the unvibe Agentic Engineering Workshop and is handed out to every
 participant in print.
 
 The source of truth lives in `chapters/`. The build pipeline produces a
@@ -64,7 +64,7 @@ DCO sign-off on every commit).
 
 Copyright © 2026 Adam Charnock, Dominik Grusemann, Traun Leyden.
 
-## About bettervibe
+## About unvibe
 
-This guide accompanies the bettervibe Agentic Engineering Workshop. More at
-[bettervibe.org](https://bettervibe.org).
+This guide accompanies the unvibe Agentic Engineering Workshop. More at
+[unvibe.org](https://unvibe.org).

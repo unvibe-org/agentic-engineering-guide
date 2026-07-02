@@ -22,7 +22,7 @@ Run `scripts/check_wmd.sh` to perform automated checks, then work through the ma
 | Page count | Must be even for any bound product |
 | Ink coverage | Total ink ≤ 300% (enforced by ISOcoated v2 300% profile) |
 
-For the bettervibe guide specifically:
+For the unvibe guide specifically:
 - Final format: **A5 (148 × 210 mm)**
 - Upload format (with bleed): **154 × 216 mm**
 - Default check uses these dimensions

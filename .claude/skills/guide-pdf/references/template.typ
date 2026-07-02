@@ -1,4 +1,4 @@
-// bettervibe — The Vibe Coder's Guide to Agentic Engineering · Typst template
+// unvibe — The Vibe Coder's Guide to Agentic Engineering · Typst template
 // Requires JetBrains Mono (system font)
 
 // ─── Page ────────────────────────────────────────────────────
@@ -15,7 +15,7 @@
       tracking: 0.5pt,
       weight: 400
     )
-    bettervibe.
+    unvibe.
   ]
 )
 
