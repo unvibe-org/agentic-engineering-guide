@@ -60,13 +60,13 @@
 
 // ─── instructors section ─────────────────────────────────────────────────────
 // section header — matches the body H2 style (amber, // prefix, uppercase)
-#place(top + left, dx: safe, dy: safe + 100mm)[
+#place(top + left, dx: safe, dy: safe + 97mm)[
   #set text(font: "JetBrains Mono", fill: amber, size: 8.5pt, weight: 600, tracking: 1.5pt)
   #text(fill: rgb("#C4623E66"), weight: 300)[\/\/ ]#upper[Instructors]
 ]
 
-#let avatar-size = 11mm
-#let instructor(photo, name, body) = block(width: 154mm - 2 * safe, below: 0.7em)[
+#let avatar-size = 10mm
+#let instructor(photo, name, body) = block(width: 154mm - 2 * safe, below: 0.55em)[
   #grid(
     columns: (avatar-size, 1fr),
     column-gutter: 3mm,
@@ -86,7 +86,7 @@
   )
 ]
 
-#place(top + left, dx: safe, dy: safe + 109mm)[
+#place(top + left, dx: safe, dy: safe + 105mm)[
   #instructor(
     "adam-photo.cmyk.jpg",
     "Adam Charnock",
@@ -95,18 +95,23 @@
   #instructor(
     "dominik-photo.cmyk.jpg",
     "Dominik Grusemann",
-    [Cofounder, Marbles AI. Former CTO of Chatchamp (acquired 2023). Previously led BMW's autonomous driving department toward agile.]
+    [Cofounder, Langmail. Former CTO of Chatchamp (acquired 2023). Previously led BMW's autonomous driving department toward agile.]
   )
   #instructor(
     "traun-photo.cmyk.jpg",
     "Traun Leyden",
     [Cofounder, Fluensy.app - Speak As Brilliantly As You Think. Twenty years shipping backend systems (Databricks, Couchbase).]
   )
+  #instructor(
+    "luca-photo.cmyk.jpg",
+    "Luca Dombetzki",
+    [Founder, Get-Ikigai. Built agentic hiring harnesses; created TUM.ai, Europe's largest AI student initiative.]
+  )
 ]
 
 // ─── CTA + QR ────────────────────────────────────────────────────────────────
 // divider above CTA
-#place(bottom + left, dx: safe, dy: -(safe + 44mm))[
+#place(bottom + left, dx: safe, dy: -(safe + 41mm))[
   #line(length: 154mm - 2 * safe, stroke: 0.4pt + hairline)
 ]
 

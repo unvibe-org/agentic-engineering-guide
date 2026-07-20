@@ -63,10 +63,30 @@ All styling lives in `.claude/skills/guide-pdf/references/`:
 
 - Page: 154 × 216 mm (A5 + 3mm bleed on all sides). Trim is 148 × 210 mm.
 - Background: `rgb("#0D0F11")` full bleed
-- Font: JetBrains Mono (system), all weights
-- Layout: terminal prompt at top, three-line title (`vibe` / `coder's` / `guide.`) with amber period, subtitle, authors row, footer with `unvibe.org` (amber dot) and version
+- Font: JetBrains Mono
+- Layout: terminal prompt at top, title, illustration, footer with `unvibe.org`
+  (amber dot) bottom-left and `vX.Y · YYYY` bottom-right
 
-To change the authors, version, or workshop date: edit `cover.typ` directly. The values are hard-coded near the bottom of the file.
+**The front cover is a pre-rendered raster image**, not Typst-drawn text.
+`cover.typ` only places `vibecoders_guide_cover_a5_bleed_cmyk.jpg` full-bleed —
+title, illustration, authors and the footer strings are all baked into that
+image (and its two RGB source PNGs). So the URL and version **cannot** be edited
+in `cover.typ`.
+
+To bump the version (or change the site URL) on the existing artwork, run the
+helper — it erases the two footer strings and redraws them in JetBrains Mono at
+the same pixel positions on all three cover assets, preserving the CMYK ICC
+profile:
+
+```bash
+cd .claude/skills/guide-pdf/references
+python3 rebrand_cover_footer.py --version v1.2 --year 2027   # then re-run the build
+```
+
+Changing the **authors row** or the **illustration** requires regenerating the
+cover artwork itself (the footer coordinates in `rebrand_cover_footer.py` would
+then need re-measuring). The back cover, by contrast, is fully Typst-native —
+edit `back-cover.typ` directly for instructor bios, hook copy, or the QR/CTA.
 
 ### Body spec (existing)
 
@@ -88,9 +108,9 @@ To update brand tokens, edit `references/design.typ` only.
 1. Edit (or add/remove) chapter files in `chapters/` — order is controlled by the `NN-` numeric prefix
 2. Re-run the script
 
-**Cover (rare):**
-1. Edit `references/cover.typ` — version string, author list, or workshop date
-2. Re-run the script
+**Cover version / URL (rare):**
+1. Run `references/rebrand_cover_footer.py --version vX.Y --year YYYY` (see Cover spec)
+2. Re-run the build script
 
 **Visual design (body):**
 1. Edit `references/design.typ`

@@ -53,17 +53,27 @@ cat "$DESIGN" "$TMP_BODY_TYP" | typst compile - "$TMP_BODY_PDF"
 # 3. Compute page numbers
 COVER_PAGES=$(qpdf --show-npages "$TMP_COVER_PDF")
 BODY_PAGES=$(qpdf --show-npages "$TMP_BODY_PDF")
-BLANK_PAGE=$(( COVER_PAGES + BODY_PAGES + 1 ))
-BACK_COVER_PAGE=$(( BLANK_PAGE + 1 ))
+FIRST_BLANK=$(( COVER_PAGES + BODY_PAGES + 1 ))
 
-# 4. Compile blank page with correct page number
-typst compile --input page="$BLANK_PAGE" "$BLANK_PAGE_TYP" "$TMP_BLANK_PAGE_PDF"
+# A bound product must have an EVEN page count (WIRmachenDRUCK requirement).
+# cover + body + back cover is already even for even-length bodies, so no blank
+# is needed then. Insert a single blank leaf before the back cover ONLY when the
+# body length would otherwise make the total odd.
+CONTENT_PAGES=$(( COVER_PAGES + BODY_PAGES + 1 ))   # + back cover
+BLANK_PDFS=()
+
+# 4. Compile the parity blank page (only when needed) with correct page number
+if (( CONTENT_PAGES % 2 == 1 )); then
+  typst compile --input page="$FIRST_BLANK" "$BLANK_PAGE_TYP" "$TMP_BLANK_PAGE_PDF"
+  BLANK_PDFS+=("$TMP_BLANK_PAGE_PDF")
+fi
 
 # 5. Compile back cover with the correct continued page number
+BACK_COVER_PAGE=$(( FIRST_BLANK + ${#BLANK_PDFS[@]} ))
 typst compile --input page="$BACK_COVER_PAGE" "$BACK_COVER_TYP" "$TMP_BACK_COVER_PDF"
 
-# 6. Merge cover + body + blank + back cover
-qpdf --empty --pages "$TMP_COVER_PDF" "$TMP_BODY_PDF" "$TMP_BLANK_PAGE_PDF" "$TMP_BACK_COVER_PDF" -- "$TMP_MERGED_PDF"
+# 6. Merge cover + body + (blank if any) + back cover
+qpdf --empty --pages "$TMP_COVER_PDF" "$TMP_BODY_PDF" ${BLANK_PDFS[@]+"${BLANK_PDFS[@]}"} "$TMP_BACK_COVER_PDF" -- "$TMP_MERGED_PDF"
 
 # 7. Convert to CMYK with Ghostscript
 gs -q -dBATCH -dNOPAUSE -dNOSAFER \
