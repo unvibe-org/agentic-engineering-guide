@@ -93,6 +93,11 @@
     [Founder, Lithus. Eighteen years of production infrastructure (Twitter, Blocknative).]
   )
   #instructor(
+    "luca-photo.cmyk.jpg",
+    "Luca Dombetzki",
+    [Founder, Get-Ikigai. Built agentic hiring harnesses; created TUM.ai, Europe's largest AI student initiative.]
+  )
+  #instructor(
     "dominik-photo.cmyk.jpg",
     "Dominik Grusemann",
     [Cofounder, Langmail. Former CTO of Chatchamp (acquired 2023). Previously led BMW's autonomous driving department toward agile.]
@@ -101,11 +106,6 @@
     "traun-photo.cmyk.jpg",
     "Traun Leyden",
     [Cofounder, Fluensy.app - Speak As Brilliantly As You Think. Twenty years shipping backend systems (Databricks, Couchbase).]
-  )
-  #instructor(
-    "luca-photo.cmyk.jpg",
-    "Luca Dombetzki",
-    [Founder, Get-Ikigai. Built agentic hiring harnesses; created TUM.ai, Europe's largest AI student initiative.]
   )
 ]
 

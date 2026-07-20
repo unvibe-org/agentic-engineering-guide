@@ -42,8 +42,9 @@ ASSETS = [
     "vibecoders_guide_cover_a5_bleed_cmyk.jpg",
 ]
 
-# Authors credited on the front cover (bottom, above the footer). Joined with " • ".
-AUTHORS = ["Adam Charnock", "Dominik Grusemann", "Traun Leyden", "Luca Dombetzki"]
+# Authors credited on the front cover (bottom, above the footer), alphabetical by
+# last name. Joined with " • ".
+AUTHORS = ["Adam Charnock", "Luca Dombetzki", "Dominik Grusemann", "Traun Leyden"]
 
 # Footer + authors layout per image geometry, measured from the cover artwork.
 #   erN/aut_er = erase boxes (ex0, ex1, ey0, ey1, src_x0, src_x1) — the last two
