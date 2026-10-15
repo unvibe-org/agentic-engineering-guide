@@ -16,4 +16,4 @@ Be honest about your own uncertainty. "I think we should do X, but I don't know 
 
 Tell it to ask questions. It will sometimes do this on its own, but not always, and the question it asks usually reminds you of context you forgot to include.
 
-Empathy you'd otherwise repeat every session belongs in `CLAUDE.md`, or your agent's equivalent. Codebase conventions, who you are, what you care about. Write it once, stop retyping it.
+Empathy you'd otherwise repeat every session belongs in `AGENTS.md`. Codebase conventions, who you are, what you care about. Write it once, stop retyping it.

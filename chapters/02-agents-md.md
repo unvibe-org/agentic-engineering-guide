@@ -1,8 +1,9 @@
-## 2. AGENTS.md/CLAUDE.md
+## 2. AGENTS.md
 
 The LLM starts every conversation with amnesia. Re-explaining your codebase, conventions, and build commands in every prompt is wasted effort — and it never quite sticks. Persist that knowledge in the repo instead.
 
 ### Best Practices:
+- *One file* - use `AGENTS.md` only. Claude Code, Codex, Cursor, and Copilot all read it. If a tool really needs a `CLAUDE.md`, make it a symlink to `AGENTS.md`.
 - *Short* — a good context file is short and load-bearing. Include only what the agent can't infer from the code.
 - *Non-obvious* — conventions, architecture choices, tooling quirks. "We use bun, not node."
 - *Tech stack* — Every `AGENTS.md` needs a `## Tech Stack` section.
